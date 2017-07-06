@@ -15,7 +15,8 @@
     "lint-staged": "lint-staged",
     "deploy": "eslint . && now && now alias",
     "bundle:analyze": "ANALYZE_BUNDLE=true yarn dev",
-    "bundle:view": "webpack-bundle-analyzer .next/stats.json"
+    "bundle:view": "webpack-bundle-analyzer .next/stats.json",
+    "isolator": "NODE_ENV=development chromatic-isolator --framework nextjs --component-dir ./components"
   },
   "dependencies": {
     "accept-language": "^3.0.15",
@@ -46,6 +47,8 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
+    "@hichroma/chromatic-agent": "^0.1.21",
+    "@hichroma/chromatic-isolator": "^0.1.21",
     "babel-eslint": "^7.2.1",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",

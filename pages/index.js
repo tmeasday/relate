@@ -3,6 +3,11 @@ import GitHubRibbon from '../components/GitHubRibbon';
 import SubscribeNewsletter from '../components/SubscribeNewsletter';
 import page from '../hocs/page';
 
+if (process.browser) {
+  require('@hichroma/chromatic-agent').default({ appCode: 'relate' })
+}
+
+
 export default page(() => (
   <div className="homePage">
     <GitHubRibbon />
